@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generated="20161012 12:44:35.146" generator="Robot 2.8.7 (Python 2.7.6 on linux2)">
+<suite source="/home/matthew/PycharmProjects/paolo1/paolo.txt" id="s1" name="Paolo">
+<test id="s1-t1" name="Login To Workshare">
+<kw type="kw" name="Selenium2Library.Open Browser">
+<doc>Opens a new browser instance to given URL.</doc>
+<arguments>
+<arg>http://qa.workshare.com</arg>
+</arguments>
+<msg timestamp="20161012 12:44:35.231" level="INFO">Opening browser 'firefox' to base url 'http://qa.workshare.com'</msg>
+<status status="PASS" endtime="20161012 12:44:36.720" starttime="20161012 12:44:35.231"></status>
+</kw>
+<kw type="kw" name="Selenium2Library.Location Should Be">
+<doc>Verifies that current URL is exactly `url`.</doc>
+<arguments>
+<arg>https://qa.workshare.com/</arg>
+</arguments>
+<msg timestamp="20161012 12:44:36.825" level="INFO">Current location is 'https://qa.workshare.com/'.</msg>
+<status status="PASS" endtime="20161012 12:44:36.825" starttime="20161012 12:44:36.721"></status>
+</kw>
+<kw type="kw" name="Selenium2Library.Maximize Browser Window">
+<doc>Maximizes current browser window.</doc>
+<arguments>
+</arguments>
+<status status="PASS" endtime="20161012 12:44:36.828" starttime="20161012 12:44:36.825"></status>
+</kw>
+<kw type="kw" name="Selenium2Library.Wait Until Page Contains Element">
+<doc>Waits until element specified with `locator` appears on current page.</doc>
+<arguments>
+<arg>name=username</arg>
+<arg>10</arg>
+<arg>error=Not found.Fuck up</arg>
+</arguments>
+<status status="PASS" endtime="20161012 12:44:37.436" starttime="20161012 12:44:36.829"></status>
+</kw>
+<kw type="kw" name="Selenium2Library.Input Text">
+<doc>Types the given `text` into text field identified by `locator`.</doc>
+<arguments>
+<arg>name=username</arg>
+<arg>kasmeena1@gmail.com</arg>
+</arguments>
+<msg timestamp="20161012 12:44:37.438" level="INFO">Typing text 'kasmeena1@gmail.com' into text field 'name=username'</msg>
+<status status="PASS" endtime="20161012 12:44:37.509" starttime="20161012 12:44:37.437"></status>
+</kw>
+<kw type="kw" name="Selenium2Library.Click Element">
+<doc>Click element identified by `locator`.</doc>
+<arguments>
+<arg>id=signup-content-form-email-btn-continue</arg>
+</arguments>
+<msg timestamp="20161012 12:44:37.510" level="INFO">Clicking element 'id=signup-content-form-email-btn-continue'.</msg>
+<status status="PASS" endtime="20161012 12:44:37.571" starttime="20161012 12:44:37.510"></status>
+</kw>
+<kw type="kw" name="Selenium2Library.Wait Until Page Contains Element">
+<doc>Waits until element specified with `locator` appears on current page.</doc>
+<arguments>
+<arg>id=signup-content-form-password-signin</arg>
+<arg>10</arg>
+<arg>error=Not found.Fuck up</arg>
+</arguments>
+<status status="PASS" endtime="20161012 12:44:37.985" starttime="20161012 12:44:37.572"></status>
+</kw>
+<kw type="kw" name="Selenium2Library.Input Text">
+<doc>Types the given `text` into text field identified by `locator`.</doc>
+<arguments>
+<arg>id=signup-content-form-password</arg>
+<arg>Workshare1</arg>
+</arguments>
+<msg timestamp="20161012 12:44:37.986" level="INFO">Typing text 'Workshare1' into text field 'id=signup-content-form-password'</msg>
+<status status="PASS" endtime="20161012 12:44:38.037" starttime="20161012 12:44:37.986"></status>
+</kw>
+<kw type="kw" name="Selenium2Library.Click Element">
+<doc>Click element identified by `locator`.</doc>
+<arguments>
+<arg>id=signup-content-form-password-signin</arg>
+</arguments>
+<msg timestamp="20161012 12:44:38.039" level="INFO">Clicking element 'id=signup-content-form-password-signin'.</msg>
+<status status="PASS" endtime="20161012 12:44:38.099" starttime="20161012 12:44:38.039"></status>
+</kw>
+<kw type="kw" name="Selenium2Library.Wait Until Page Contains Element">
+<doc>Waits until element specified with `locator` appears on current page.</doc>
+<arguments>
+<arg>id=app-header-user-info</arg>
+<arg>10</arg>
+<arg>error=Not found.Fuck up</arg>
+</arguments>
+<status status="PASS" endtime="20161012 12:44:39.692" starttime="20161012 12:44:38.099"></status>
+</kw>
+<kw type="kw" name="Selenium2Library.Location Should Be">
+<doc>Verifies that current URL is exactly `url`.</doc>
+<arguments>
+<arg>https://qa.workshare.com/#home</arg>
+</arguments>
+<msg timestamp="20161012 12:44:39.695" level="INFO">Current location is 'https://qa.workshare.com/#home'.</msg>
+<status status="PASS" endtime="20161012 12:44:39.695" starttime="20161012 12:44:39.692"></status>
+</kw>
+<doc></doc>
+<tags>
+</tags>
+<status status="PASS" endtime="20161012 12:44:39.695" critical="yes" starttime="20161012 12:44:35.230"></status>
+</test>
+<test id="s1-t2" name="Login out">
+<kw type="kw" name="Selenium2Library.Click Element">
+<doc>Click element identified by `locator`.</doc>
+<arguments>
+<arg>id=app-header-user-info</arg>
+</arguments>
+<msg timestamp="20161012 12:44:39.696" level="INFO">Clicking element 'id=app-header-user-info'.</msg>
+<status status="PASS" endtime="20161012 12:44:39.752" starttime="20161012 12:44:39.696"></status>
+</kw>
+<kw type="kw" name="Selenium2Library.Wait Until Page Contains Element">
+<doc>Waits until element specified with `locator` appears on current page.</doc>
+<arguments>
+<arg>id=app-user-menu-logout</arg>
+<arg>10</arg>
+<arg>error=Not found.Fuck up</arg>
+</arguments>
+<status status="PASS" endtime="20161012 12:44:39.755" starttime="20161012 12:44:39.752"></status>
+</kw>
+<kw type="kw" name="Selenium2Library.Click Element">
+<doc>Click element identified by `locator`.</doc>
+<arguments>
+<arg>id=app-user-menu-logout</arg>
+</arguments>
+<msg timestamp="20161012 12:44:39.756" level="INFO">Clicking element 'id=app-user-menu-logout'.</msg>
+<status status="PASS" endtime="20161012 12:44:39.812" starttime="20161012 12:44:39.756"></status>
+</kw>
+<kw type="kw" name="Selenium2Library.Wait Until Page Contains Element">
+<doc>Waits until element specified with `locator` appears on current page.</doc>
+<arguments>
+<arg>id=signup-content-form-password-signin</arg>
+<arg>10</arg>
+<arg>error=Not found.Fuck up</arg>
+</arguments>
+<status status="PASS" endtime="20161012 12:44:40.662" starttime="20161012 12:44:39.813"></status>
+</kw>
+<kw type="kw" name="Selenium2Library.Location Should Be">
+<doc>Verifies that current URL is exactly `url`.</doc>
+<arguments>
+<arg>https://qa.workshare.com/#signin-password/kasmeena1%40gmail.com</arg>
+</arguments>
+<msg timestamp="20161012 12:44:40.665" level="INFO">Current location is 'https://qa.workshare.com/#signin-password/kasmeena1%40gmail.com'.</msg>
+<status status="PASS" endtime="20161012 12:44:40.665" starttime="20161012 12:44:40.662"></status>
+</kw>
+<doc></doc>
+<tags>
+</tags>
+<status status="PASS" endtime="20161012 12:44:40.666" critical="yes" starttime="20161012 12:44:39.695"></status>
+</test>
+<kw type="teardown" name="Selenium2Library.Close All Browsers">
+<doc>Closes all open browsers and resets the browser cache.</doc>
+<arguments>
+</arguments>
+<status status="PASS" endtime="20161012 12:44:40.694" starttime="20161012 12:44:40.666"></status>
+</kw>
+<doc></doc>
+<metadata>
+</metadata>
+<status status="PASS" endtime="20161012 12:44:40.695" starttime="20161012 12:44:35.146"></status>
+</suite>
+<statistics>
+<total>
+<stat fail="0" pass="2">Critical Tests</stat>
+<stat fail="0" pass="2">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat fail="0" pass="2" id="s1" name="Paolo">Paolo</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
