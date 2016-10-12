@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generated="20161011 17:27:49.498" generator="Robot 2.8.7 (Python 2.7.6 on linux2)">
+<suite source="/home/matthew/PycharmProjects/example2/firstlog.txt" id="s1" name="Firstlog">
+<test id="s1-t1" name="Login To Workshare">
+<kw type="kw" name="BuiltIn.No Operation">
+<doc>Does absolutely nothing.</doc>
+<arguments>
+</arguments>
+<status status="PASS" endtime="20161011 17:27:49.559" starttime="20161011 17:27:49.559"></status>
+</kw>
+<kw type="kw" name="Selenium2Library.Open Browser">
+<doc>Opens a new browser instance to given URL.</doc>
+<arguments>
+<arg>https://qa.workshare.com</arg>
+</arguments>
+<msg timestamp="20161011 17:27:49.560" level="INFO">Opening browser 'firefox' to base url 'https://qa.workshare.com'</msg>
+<status status="PASS" endtime="20161011 17:27:53.220" starttime="20161011 17:27:49.559"></status>
+</kw>
+<kw type="kw" name="Selenium2Library.Location Should Be">
+<doc>Verifies that current URL is exactly `url`.</doc>
+<arguments>
+<arg>https://qa.workshare.com/</arg>
+</arguments>
+<msg timestamp="20161011 17:27:53.326" level="INFO">Current location is 'https://qa.workshare.com/'.</msg>
+<status status="PASS" endtime="20161011 17:27:53.326" starttime="20161011 17:27:53.221"></status>
+</kw>
+<doc></doc>
+<tags>
+</tags>
+<status status="PASS" endtime="20161011 17:27:53.326" critical="yes" starttime="20161011 17:27:49.558"></status>
+</test>
+<kw type="teardown" name="Selenium2Library.Close All Browsers">
+<doc>Closes all open browsers and resets the browser cache.</doc>
+<arguments>
+</arguments>
+<status status="PASS" endtime="20161011 17:27:53.339" starttime="20161011 17:27:53.327"></status>
+</kw>
+<doc></doc>
+<metadata>
+</metadata>
+<status status="PASS" endtime="20161011 17:27:53.339" starttime="20161011 17:27:49.498"></status>
+</suite>
+<statistics>
+<total>
+<stat fail="0" pass="1">Critical Tests</stat>
+<stat fail="0" pass="1">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat fail="0" pass="1" id="s1" name="Firstlog">Firstlog</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>

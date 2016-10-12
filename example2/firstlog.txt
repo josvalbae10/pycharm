@@ -1,0 +1,9 @@
+*** Settings ***
+Library  Selenium2Library
+Suite Teardown  Close All Browsers
+
+*** Test cases ***
+Login To Workshare
+  No Operation
+  Open Browser  https://qa.workshare.com
+  Location Should Be  https://qa.workshare.com/
