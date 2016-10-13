@@ -1,0 +1,54 @@
+*** Settings ***
+Library  Selenium2Library
+Suite Teardown  Close All Browsers
+
+Force Tags  forcedtag
+Default Tags  default
+
+*** Test Cases ***
+Login To Workshare
+    [Tags]  run  forcedtag
+    Navigate to login page
+    Login Page is displayed
+    Login
+    Homepage is displayed
+    Logout
+    Login Page is displayed after logout
+
+Dont run
+  [Tags]  donotrun  forcedtag
+  Fail
+
+Test 3
+  [Tags]  default  #Es lo mimso si la omitimos
+  no operation
+*** Keywords ***
+Navigate to login page
+  Open Browser  http://qa.workshare.com
+  Maximize Browser Window
+
+Login
+  Input Text  name=username  kasmeena1@gmail.com
+  Click Element  id=signup-content-form-email-btn-continue
+  Wait Until Page Contains Element  id=signup-content-form-password-signin  10  error=Not found.Fuck up
+  Input Text  id=signup-content-form-password  Workshare1
+  Click Element  id=signup-content-form-password-signin
+
+Logout
+  Click Element  id=app-header-user-info
+  Wait Until Page Contains Element  id=app-user-menu-logout  10  error=Not found.Fuck up
+  Click Element  id=app-user-menu-logout
+
+Login Page is displayed
+  location Should Be  https://qa.workshare.com/
+  Wait Until Page Contains Element  name=username  10  error=Not found.Fuck up
+
+Homepage is displayed
+  Location Should Contain  https://qa.workshare.com
+  Wait Until Page Contains Element  id=app-header-user-info  10  error=Not found.Fuck up
+
+Login Page is displayed after logout
+  Location Should Contain  https://qa.workshare.com
+  wait until page contains element  id=signup-content-form-password
+
+
